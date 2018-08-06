@@ -3,7 +3,8 @@ node_js:
   - 10.8.0
 install:
   - npm install -g firebase-tools
-before_deploy:
+script:
+  - echo "Deploy"
   - cd sample
   - npm run generate
   - cd ..
@@ -11,5 +12,3 @@ deploy:
   provider: firebase
   token:
     secure: $FIREBASE_TOKEN
-script:
-  - echo "Deploy"
