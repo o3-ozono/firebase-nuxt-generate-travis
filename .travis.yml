@@ -3,7 +3,5 @@ node_js:
   - 10.8.0
 install:
   - npm install -g firebase-tools
-deploy:
-  provider: firebase
-  token:
-    secure: $FIREBASE_TOKEN
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
