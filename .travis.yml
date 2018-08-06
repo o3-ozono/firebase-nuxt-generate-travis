@@ -6,6 +6,7 @@ install:
 script:
   - echo "Deploy"
   - cd sample
+  - npm i
   - npm run generate
   - cd ..
 deploy:
