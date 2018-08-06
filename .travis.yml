@@ -11,5 +11,6 @@ script:
   - cd ..
 deploy:
   provider: firebase
+  skip_cleanup: true
   token:
     secure: $FIREBASE_TOKEN
